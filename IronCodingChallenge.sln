@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35013.160
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IronCodingChallenge", "IronCodingChallenge\IronCodingChallenge.csproj", "{9D1AFBF6-F655-4741-88D4-C0B1D785EBFD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9D1AFBF6-F655-4741-88D4-C0B1D785EBFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D1AFBF6-F655-4741-88D4-C0B1D785EBFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D1AFBF6-F655-4741-88D4-C0B1D785EBFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D1AFBF6-F655-4741-88D4-C0B1D785EBFD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {400848D5-334E-4966-BD50-8B158AB4A044}
+	EndGlobalSection
+EndGlobal
