@@ -1,7 +1,7 @@
 # OldPhoneKeyPadConverter
 
 ## Overview
-The IronCodingChallenge is a C# project that simulates the behavior of old mobile phone keypads. It converts sequences of key presses into corresponding text, similar to how texting was done on early mobile phones.
+The IronCodingChallenge is a C# Console Application that simulates the behavior of old mobile phone keypads. It converts sequences of key presses into corresponding text, similar to how texting was done on early mobile phones.
 
 ## Features
 - Converts sequences of numeric key presses into text.
@@ -33,9 +33,19 @@ The IronCodingChallenge is a C# project that simulates the behavior of old mobil
     ```sh
     dotnet run
     ```
+3. The application demonstrates how to convert old phone keypad inputs to text. Here are some examples:
+
+- Input: `33#` → Output: `E`
+- Input: `227*#` → Output: `B`
+- Input: `4433555 555666#` → Output: `HELLO`
+- Input: `8 88777444666*664#` → Output: `TURING`
+- Input: `222 2 22#` → Output: `CAB`
+
+For more detailed usage, refer to the `OldPhoneKeyPadConverter` class in `OldPhoneKeyPadConverter.cs`.
+
 
 ## Example
-Given the input sequence `2 2 2`, the converter will output `C` because pressing `2` three times cycles through `A`, `B`, and `C`.
+Given the input sequence `222`, the converter will output `C` because pressing `2` three times cycles through `A`, `B`, and `C`.
 
 ## Contributing
 Contributions are welcome! Please open an issue or submit a pull request for any changes.
