@@ -1,6 +1,12 @@
 ﻿namespace IronCodingChallenge;
 public class InputValidator
 {
+    /// <summary>
+    /// Validates the input string.
+    /// </summary>
+    /// <param name="input">Input String from Old Phone KeyPad to convert to Regular Text</param>
+    /// <exception cref="ArgumentException"></exception>
+    /// <exception cref="KeyNotFoundException"></exception>
     public static void ValidateInput(string input)
     {
         if (string.IsNullOrWhiteSpace(input))
