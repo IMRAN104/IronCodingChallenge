@@ -24,5 +24,14 @@ public class Program
         Console.WriteLine($"Input: 0# and Output: {OldPhoneKeyPadConverter.ConvertOldPhoneInputToRegularText("0#")}"); // Output: (space)
         Console.WriteLine($"Input: 111# and Output: {OldPhoneKeyPadConverter.ConvertOldPhoneInputToRegularText("111#")}"); // Output: (empty)
         Console.WriteLine($"Input: 2222# and Output: {OldPhoneKeyPadConverter.ConvertOldPhoneInputToRegularText("2222#")}"); // Output: C
+
+        // take input from user until user types 'exit' and convert the input to text
+        Console.WriteLine("Enter your old phone's input to convert it to regular text.\nType 'exit' to exit.");
+        string input;
+        while (!string.IsNullOrWhiteSpace(input = Console.ReadLine()) && input != "exit")
+        {
+            Console.WriteLine($"Output: {OldPhoneKeyPadConverter.ConvertOldPhoneInputToRegularText(input)}");
+        }
+        Console.WriteLine("Thank you for using the Application!");
     }
 }

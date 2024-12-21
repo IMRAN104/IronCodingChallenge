@@ -3,8 +3,25 @@ public class OldPhoneKeyPadConverter
 {
     public static string ConvertOldPhoneInputToRegularText(string input)
     {
-        if (!InputValidator.ValidateInput(input))
+        try
+        {
+            InputValidator.ValidateInput(input);
+        }
+        catch (ArgumentException ex)
+        {
+            Console.WriteLine($"Validation Error: {ex.Message}");
             return string.Empty;
+        }
+        catch (KeyNotFoundException ex)
+        {
+            Console.WriteLine($"Validation Error: {ex.Message}");
+            return string.Empty;
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"An unexpected error occurred: {ex.Message}");
+            return string.Empty;
+        }
 
         var stack = new Stack<char>();
 
