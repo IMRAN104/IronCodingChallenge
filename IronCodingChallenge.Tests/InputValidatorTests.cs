@@ -13,19 +13,27 @@ public class InputValidatorTests
         // Arrange
         _emptyInput = "";
         _inputWithoutEndChar = "223";
-        _inputWithInvalidChar = "356 $ 56";
+        _inputWithInvalidChar = "356 $ 56#";
         _inputWithValidChars = _inputWithoutEndChar + Constants.EndInputChar;
         _inputWithSpaceAndBackspace = _inputWithoutEndChar + Constants.SpaceChar + Constants.BackspaceChar + Constants.EndInputChar;
     }
 
     [Test]
-    public void ValidateInput_ShouldReturnExpectedResults()
+    public void ValidateInputTests()
     {
-        // Act and Assert
-        Assert.IsFalse(InputValidator.ValidateInput(_emptyInput));
-        Assert.IsFalse(InputValidator.ValidateInput(_inputWithoutEndChar));
-        Assert.IsFalse(InputValidator.ValidateInput(_inputWithInvalidChar));
-        Assert.IsTrue(InputValidator.ValidateInput(_inputWithValidChars));
-        Assert.IsTrue(InputValidator.ValidateInput(_inputWithSpaceAndBackspace));
+        // Test for null or empty input
+        Assert.Throws<ArgumentException>(() => InputValidator.ValidateInput(_emptyInput));
+
+        // Test for input without the end character
+        Assert.Throws<ArgumentException>(() => InputValidator.ValidateInput(_inputWithoutEndChar));
+
+        // Test for input with invalid characters
+        Assert.Throws<KeyNotFoundException>(() => InputValidator.ValidateInput(_inputWithInvalidChar));
+
+        // Test for valid input
+        Assert.DoesNotThrow(() => InputValidator.ValidateInput(_inputWithValidChars));
+
+        // Test for input with space and backspace characters
+        Assert.DoesNotThrow(() => InputValidator.ValidateInput(_inputWithSpaceAndBackspace));
     }
 }
