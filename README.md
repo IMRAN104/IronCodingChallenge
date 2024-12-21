@@ -22,6 +22,7 @@ The IronCodingChallenge is a C# Console Application that simulates the behavior 
 2. Navigate to the project directory:
     ```sh
     cd IronCodingChallenge
+    cd IronCodingChallenge
     ```
 
 ### Usage
