@@ -46,7 +46,7 @@ public class OldPhoneKeyPadConverter
         if (!stack.Any())
             return;
 
-        char currentChar = stack.Peek();
+        var currentChar = stack.Peek();
         if (!Constants.KeyMap.ContainsKey(currentChar))
             return;
 
@@ -57,9 +57,9 @@ public class OldPhoneKeyPadConverter
             currentCharAppearedCount++;
         }
 
-        string letters = Constants.KeyMap[currentChar];
-        int index = (currentCharAppearedCount - 1) % letters.Length;           // Cycle through letters
-        stack.Push(letters[index]);
+        var lettersForCurrentChar = Constants.KeyMap[currentChar];
+        var index = (currentCharAppearedCount - 1) % lettersForCurrentChar.Length;           // Cycle through letters
+        stack.Push(lettersForCurrentChar[index]);
         return;
     }
 }
